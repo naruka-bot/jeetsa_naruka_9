@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Developer Journey</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --green: #34eb7d;
+      --dark: #0d0d0d;
+      --light-bg: rgba(255, 255, 255, 0.02);
+      --border-glow: rgba(52, 235, 125, 0.6);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Roboto Mono', monospace;
+      background-color: var(--dark);
+      color: var(--green);
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    h1, h2 {
+      text-align: center;
+      margin-bottom: 1rem;
+      text-shadow: 0 0 5px var(--green);
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      animation: flicker 2s infinite alternate;
+    }
+
+    @keyframes flicker {
+      0% { opacity: 1; text-shadow: 0 0 10px var(--green); }
+      50% { opacity: 0.7; text-shadow: 0 0 5px var(--green); }
+      100% { opacity: 1; text-shadow: 0 0 10px var(--green); }
+    }
+
+    .intro {
+      max-width: 700px;
+      background: var(--light-bg);
+      border: 1px solid var(--green);
+      border-radius: 12px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 0 20px var(--border-glow);
+      transition: transform 0.3s ease;
+    }
+
+    .intro:hover {
+      transform: scale(1.02);
+    }
+
+    .profile-container {
+      text-align: center;
+    }
+
+    #profile-img {
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      border: 3px solid var(--green);
+      object-fit: cover;
+      transition: filter 0.3s ease, transform 0.3s ease;
+      box-shadow: 0 0 25px var(--border-glow);
+      filter: grayscale(30%) contrast(110%);
+    }
+
+    #profile-img:hover {
+      filter: grayscale(0%) contrast(120%) drop-shadow(0 0 15px var(--green));
+      transform: scale(1.05);
+    }
+
+    .footer {
+      margin-top: auto;
+      font-size: 0.9rem;
+      opacity: 0.7;
+      padding-top: 2rem;
+    }
+
+    @media (max-width: 600px) {
+      body {
+        padding: 1rem;
+      }
+
+      .intro {
+        padding: 1.2rem;
+      }
+
+      #profile-img {
+        width: 160px;
+        height: 160px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Developer Journey</h1>
+
+  <div class="intro">
+    <h2>My Story</h2>
+    <p>
+      From my first <code>Hello World</code> to building full-stack apps, coding's been more than a skill—it's my art form.
+      Every bug squashed and every feature built adds to a rhythm, a song of problem-solving. My mission?
+      Make tech that feels human. Clean. Useful. Powerful.
+    </p>
+  </div>
+
+  <div class="profile-container">
+    <img id="profile-img" src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/8595decd-2d64-494b-a6e7-48f0eb9e4127.png"
+         alt="Portrait of developer with futuristic city background">
+  </div>
+
+  <div class="footer">© 2025 - Built with curiosity, caffeine, and CSS.</div>
+
+</body>
+</html>
